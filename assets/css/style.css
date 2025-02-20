@@ -581,18 +581,8 @@ section {
 }
 
 .portfolio .portfolio-wrap::before {
-  content: "";
-  background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  transition: all ease-in-out 0.3s;
-  z-index: 2;
-  opacity: 0;
+  pointer-events: none;
 }
-
 .portfolio .portfolio-wrap .portfolio-links {
   opacity: 1;
   left: 0;
@@ -1104,6 +1094,9 @@ section {
   color: #eaebf0;
 }
 
+.portfolio-wrap:hover .portfolio-links {
+  display: none !important;
+}
 @media (max-width: 1199px) {
   #footer {
     position: static;
